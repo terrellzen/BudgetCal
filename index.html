@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Budget Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-container">
+            <h1 class="text-center">Monthly Budget Calculator</h1>
+            <form id="budgetForm">
+                <div class="form-group">
+                    <label for="rent">Rent:</label>
+                    <input type="number" class="form-control" id="rent" placeholder="Enter Rent" />
+                </div>
+                <div class="form-group">
+                    <label for="electric">Electric:</label>
+                    <input type="number" class="form-control" id="electric" placeholder="Enter Electric" />
+                </div>
+                <div class="form-group">
+                    <label for="internet">Internet:</label>
+                    <input type="number" class="form-control" id="internet" placeholder="Enter Internet" />
+                </div>
+                <div class="form-group">
+                    <label for="utilities">Trash/Water/Sewage:</label>
+                    <input type="number" class="form-control" id="utilities" placeholder="Enter Utilities" />
+                </div>
+                <div class="form-group">
+                    <label for="groceries">Groceries:</label>
+                    <input type="number" class="form-control" id="groceries" placeholder="Enter Groceries" />
+                </div>
+                <div class="form-group">
+                    <label for="gas">Gas:</label>
+                    <input type="number" class="form-control" id="gas" placeholder="Enter Gas" />
+                </div>
+                <div class="form-group">
+                    <label for="others">Others:</label>
+                    <input type="number" class="form-control" id="others" placeholder="Enter Other Expenses" />
+                </div>
+                <div class="form-group">
+                    <label for="income">Income:</label>
+                    <input type="number" class="form-control" id="income" placeholder="Enter Income" />
+                </div>
+                <button type="button" class="btn btn-primary" onclick="calculateBudget()">Calculate</button>
+                <button id="savePdfBtn" class="btn btn-success" style="display:none;">Save as PDF</button>
+                <button id="saveJsonBtn" class="btn btn-info" style="display:none;">Save as JSON</button>
+            </form>
+
+            <!-- Display results here -->
+            <div class="result" id="result">
+                <div class="alert alert-info" id="resultAlert"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!--
